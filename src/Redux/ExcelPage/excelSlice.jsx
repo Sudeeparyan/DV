@@ -18,7 +18,6 @@ const ExcelSlice = createSlice({
       state.Error = action.payload.error;
     },
     storeExcelid: (state, action) => {
-      console.log(action);
       state.ProjectId = action.payload.projectId;
       state.Error = action.payload.error;
     },

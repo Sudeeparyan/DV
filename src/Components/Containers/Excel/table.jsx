@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { ExcelSelector } from "../../../Redux/ExcelPage/excelSelector";
 import Table from "../../Reusables/Table/table";

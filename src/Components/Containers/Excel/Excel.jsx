@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styles from "./Excel.module.css";
 import { useNavigate } from "react-router-dom";
 import { UploadOutlined } from "@ant-design/icons";
@@ -25,7 +25,10 @@ const Excel = () => {
       const formData = new FormData();
       formData.append("file", file);
       //sending POST Request
+      console.log("pp");
       const res = await sendExcelCSV(formData);
+      console.log(res);
+
       //sending GET Request based on condition
       if (res.data.fileStatus === "success") await getExcel(res.data.projectId);
     } catch (error) {
@@ -60,6 +63,7 @@ const Excel = () => {
           {sendExcelCSV.isError && <h4>Error</h4>}
         </div>
       </div>
+      
     </div>
   );
 };
